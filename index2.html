@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link href="style-v2.css" rel="stylesheet" />
+
+    <title>ALTSCHOOL ID CARD</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="grid-container">
+        <div id="idcard" class="id-container">
+          <div class="id-header">
+            <img  src="/img-v2/header.svg" alt="">
+          </div>
+  
+          <div class="image-container">
+            <div class="avatar-box">
+              <label for="file-input">
+                <img id="avatar"  src="/img-v2/avatar-altschool.png" alt="">
+                <img id="imagePreview" class="circle-avatar" style="display: none;"  src="" alt="">
+              </label>
+            </div>
+            <input id="file-input" type="file" />
+          </div>
+          
+          <div class="desc-container">
+            <div class="personal" >
+              <div class="">
+                <p id="altName" class="name" contenteditable="true">John Doe</p>
+                <p class="designation" >Student</p>
+              </div>
+            </div>
+            <div class="alt-details">
+              <div>
+                <div class="align-detail">
+                  <p><strong>ID Number:</strong></p> 
+                  <p id="altSchoolID" contenteditable="true">ALT/SOE/023/0156</p>
+                </div>
+                <hr>
+                <div class="align-detail">
+                  <p><strong>AltSchool of:</strong></p> 
+                  <p id="displaySchool" style="display: none;"></p>
+                  <select style="width: 120px;" name="" id="school">
+                    <option disabled id="defaultSchool" selected>select school</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Product">Product</option>
+                    <option value="Data">Data</option>
+                  </select>
+                </div>
+                <hr>
+                <div class="align-detail">
+                  <p><strong>Learning Track:</strong></p> 
+                  <p id="displayTrack" style="display: none;"></p>
+                  <select  disabled style="width: 150px;" name="" id="track">
+                    <option disabled id="defaultTrack" selected>select track</option>
+                    
+                  </select>
+                </div>
+
+              </div>
+            </div>
+          </div>
+            
+          <p class="validity">
+             Valid unitl <span class="date"></span><br>
+            <i class="fas fa-map-marker-alt"></i> Remote
+          </p>
+          
+       
+          <div class="id-footer">
+            <img src="/img-v2/bottom-bg.svg" alt="">
+          </div>
+        </div>
+        
+        <div class="download-corner">
+          <div class="save-container">
+            <p><button class="btn" onclick="saveCardData()">Save Card</button></p>
+            <p style="padding: 2rem 1rem;">
+              <label for="jpg-format">
+                <i class="fas fa-download"></i> JPEG
+                <input id="jpg-format" type="radio" name="format" value="jpeg">
+              </label>
+              |
+              <label style="padding-left: 10px;" for="png-format">
+                <i class="fas fa-download"></i> PNG
+                <input id="png-format" type="radio" name="format" value="png">
+              </label>
+             
+            </p>
+            <p><button id="downloadBtn" class="btn" onclick="downloadIdCard()">Download ID Card</button></p> 
+          </div>
+          <p id="msg" style="display: none; font-size: 9pt; padding-top: 1rem;">
+          </p>
+        </div>
+    
+
+      </div>
+      
+    </main>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dom-to-image-more@3.1.6/dist/dom-to-image-more.min.js"></script>
+    <script src="index2.js"></script>
+  </body>
+</html>

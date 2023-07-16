@@ -1,0 +1,301 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    background-image: url("images/email-pattern.webp");
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+} 
+
+.header{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+
+    /* gap: 10px; */
+    /* margin: 4rem auto; */
+}
+
+@media (max-width: 768px) {
+
+    .grid-container {
+        grid-template-columns: 1fr;
+
+    }
+    .main-container{
+        width: 50%;
+        margin: 10px auto;
+    }
+    
+}
+
+@media (min-width: 576px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+      }
+   
+    .main-container{
+        width: 50%;
+        margin: 10px auto;
+    }
+
+      
+}
+
+
+.id-container{
+    background-color: #f4f4f4;
+    /* width: 80%; */
+    border: 1px solid #E8E3DD;
+    box-shadow: rgb(38, 57, 77)0px 20px 30px -10px;
+    border-radius: 3px;
+}
+
+.id-footer{
+    margin-top: 5px;
+}
+
+.id-footer img{
+    width: 100%; 
+    height: auto;
+    margin-bottom: -5px;
+}
+
+.id-header img{
+    width: 100%; 
+    height: auto;
+}
+
+.avatar-box{
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    border: 5px solid #6772E5;
+    background-color: #E8E3DD;
+}
+
+.avatar-box>label{
+    cursor: pointer;
+}
+
+.avatar-box img{
+    width: 100%; 
+    height: 100%; 
+    clip-path: circle();
+}
+
+.circle-avatar{
+    width: 100%; 
+    height: 100%; 
+    clip-path: circle();
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.image-container>input{
+    display: none;
+}
+
+.desc-container{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.personal{
+    margin: 10px auto 10px auto;
+}
+
+.alt-details{
+    display: inline-block;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 12px;
+    width: 90%;
+    padding: 10px;
+    border: 5px solid #6772E5;
+    background-color: #E8E3DD;
+
+}
+
+.align-detail{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 7px;
+}
+
+.name{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase; 
+    color: #000
+}
+.name, .designation {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+.designation{
+    color: #6772E5;
+    font-weight: 500;
+}
+
+.description{
+    padding-top: 1rem;
+    display: block;
+    margin-bottom: 4rem;
+}
+
+.desc{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    text-align: center;
+}
+
+.details{
+    position: absolute;
+    line-height: 1.8;
+}
+
+.btn{
+    background-color: #6772E5;
+    border-style: none;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #5762e1;
+}
+
+.save-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+.download-corner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(103, 103, 103, 0.2);
+    padding: 2rem 3rem;
+    height: auto;
+   
+    
+}
+
+.validity{
+    position: relative;
+    width: auto;
+    height: auto;
+    top: 7%;
+    left: 0;
+    font-style: italic; 
+    text-align: center;
+    font-weight: 200;
+    font-size: 9pt;
+
+}
+/* .logo{
+    padding-top: 3rem;
+} */
+
+/* LAYOUT */
+
+/* .container {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 370px;
+    width: 70%;
+    margin: 40px auto;
+    justify-content: space-between; 
+   
+} */
+
+.coy-logo {
+    width: 100%; 
+    max-width: 70px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.logo-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner {
+    width: 100%;
+    max-width: 300px;
+    background-color: #6772E5;
+    margin-bottom: 10px;
+    padding: 10px;
+    
+}
+
+#id-photo {
+   width: 100%;
+   max-width: 50%;
+   height: 90px;
+   margin: 0;
+   padding: 0;
+   border: 1px solid #676767;
+   background-position: center; 
+   background-size: cover;
+}
+
+.left-container {
+    width: 185px;
+    display: flex;
+    text-align: center;
+    background-color: #E8E3DD;    
+}
+
+.photos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fcf5ed;
+    width: 185px;
+
+}
+
+.id-card {
+    background: #fefefe;
+    height: 49%;
+    /* text-align: left; */
+    /* padding-left: 5px; */
+}
+
+
+
+
+
+

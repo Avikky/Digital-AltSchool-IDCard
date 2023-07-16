@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    /* .id-container{
+        width: 100%;
+    } */
+    .main-container{
+        width: 100%;
+        /* margin: 10px auto; */
+    }
+    
+}
+
+@media (min-width: 576px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto auto;
+      }
+      .id-container{
+          width: 100%;
+      }
+      .main-container{
+          width: 100%;
+          /* margin: 10px auto; */
+      }
+      
+}
