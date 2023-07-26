@@ -9,6 +9,7 @@
     
 }
 
+
 @media (width >= 588px) {
     .grid-container {
       grid-template-columns: 1fr 1fr;
@@ -19,6 +20,13 @@
         margin: auto;
     }
     
+}
+
+@media (width >= 1200px){
+    .grid-container {
+        grid-template-columns: 1fr 2fr;
+          grid-template-rows: auto auto;
+      }
 }
 
 

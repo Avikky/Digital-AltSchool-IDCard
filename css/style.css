@@ -23,6 +23,10 @@ p {
     justify-content: space-between;
 }
 
+.main-container{
+    margin-top: 20px;
+}
+
 .grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
