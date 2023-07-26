@@ -261,7 +261,11 @@ function downloadIdCard(){
 }
 
 function downloadAsPNG(){
-  domtoimage.toPng(idCard)
+  domtoimage.toPng(idCard, {
+    width: idCard.clientWidth * 2,
+    height: idCard.clientHeight * 2,
+    style: { transform: 'scale('+2+')', transformOrigin: 'top left'}
+  })
   .then(function (dataUrl) {
     var link = document.createElement('a');
     link.download = 'altschool-ID-Card.png';
@@ -279,10 +283,14 @@ function downloadAsJpeg(){
 
   debugger
 
-  domtoimage.toJpeg(idCard, { quality: 0.9 })
+  domtoimage.toJpeg(idCard, { 
+    width: idCard.clientWidth * 2,
+    height: idCard.clientHeight * 2,
+    style: { transform: 'scale('+2+')', transformOrigin: 'top left'}
+  })
     .then(function (dataUrl) {
         var link = document.createElement('a');
-        link.download = 'altschool-ID-Card.jpeg';
+        link.download = 'my-altschool-ID-Card.jpeg';
         link.href = dataUrl;
         link.click();
     });

@@ -4,97 +4,110 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?Roboto:wght@300;700&display=swap"
-      rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/mobile.css" rel="stylesheet" />
+
     <title>ALTSCHOOL ID CARD</title>
   </head>
   <body>
-    <main class="container">
-      <div class="left-container">
-        <div class="card">
-          <div class="photos">
-            <div class="logo-name">
-              <img
-              src="images/altschlogo.svg"
-              class="coy-logo"
-              alt="The Altschool Africa logo"
-              />
-              <p class="sch-name">AltSchool Africa</p>
-            </div>
-            <div class="banner"></div>
-
-            <div id="id-photo"></div>
+    <main class="main-container">
+      <div class="grid-container">
+        <div id="idcard" class="id-container">
+          <div class="id-header">
+            <img  src="/img-v2/header.svg" alt="">
           </div>
+  
+          <div class="image-container">
+            <div class="avatar-box">
+              <label for="file-input">
+                <img id="avatar"  src="/img-v2/avatar-altschool.png" alt="">
+                <img id="imagePreview" class="circle-avatar" style="display: none;"  src="" alt="">
+              </label>
+            </div>
+            <input id="file-input" type="file" />
+          </div>
+          
+          <div class="desc-container">
+            <div class="personal" >
+              <div class="">
+                <p id="altName" class="name" contenteditable="true">John Doe</p>
+                <p class="designation" >Student</p> 
+                <h3>AltSchool Africa</h3>
+              </div>
+             
+            </div>
+            <div class="alt-details">
+              <div>
+                <div class="align-detail">
+                  <p><strong>ID NO:</strong></p> 
+                  <p id="altSchoolID" contenteditable="true">ALT/SOE/023/0156</p>
+                </div>
+                <hr>
+                <div class="align-detail">
+                  <p><strong>School Of:</strong></p> 
+                  <p id="displaySchool" style="display: none;"></p>
+                  <select style="width: 120px;" name="" id="school">
+                    <option disabled id="defaultSchool" selected>select school</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Product">Product</option>
+                    <option value="Data">Data</option>
+                  </select>
+                </div>
+                <hr>
+                <div class="align-detail">
+                  <p><strong>Track:</strong></p> 
+                  <p id="displayTrack" style="display: none;"></p>
+                  <select  disabled style="width: 150px;" name="" id="track">
+                    <option disabled id="defaultTrack" selected>select track</option>
+                    
+                  </select>
+                </div>
 
-          <div class="id-card">
-            <p id="name-label"><span></span></p>
-            <p id="id-label"><span></span></p>
-            <p id="school-label"><span></span></p>
-            <p id="track-label"><span></span></p>
-            <p id="fine-print">Valid Until April 2024 REMOTE: FULL TIME</p>
+              </div>
+            </div>
+          </div>
+            
+          <p class="validity" style="font-weight: 600; font-size: 15px;">
+             Valid until <span class="date"></span>
+             <!-- <br> -->
+            <!-- <i class="fas fa-map-marker-alt"></i> Remote -->
+          </p>
+          
+       
+          <div class="id-footer">
+            <img src="/img-v2/bottom-bg.svg" alt="">
           </div>
         </div>
-      </div>
-      </div>
-
-      <div class="right-container">
-        <form class="card-info" action="#" method="post">
-          <label for="my-photo">Select a file:</label>
-          <input
-            type="file"
-            id="my-photo"
-            name="my-photo"
-            accept="image/png, image/jpg, image/jpeg"
-          />
-          <label for="fullname">Full Name</label>
-          <input
-            type="text"
-            id="fullname"
-            name="fullname"
-            placeholder="FirstName LastName"
-            required
-          />
-          <label for="idNumber">ID Number</label>
-          <input
-            type="text"
-            id="idNumber"
-            name="idNumber"
-            placeholder="Enter your ID number"
-            required
-          />
-          <label for="school">Select School</label>
-          <select name="school" id="school">
-            <option value="">Choose School</option>
-            <option value="School of Data">School of Data</option>
-            <option value="School of Engineering">School of Engineering</option>
-            <option value="School of Products">School of Product</option>
-          </select>
-          <label for="track">Select Track</label>
-          <select name="track" id="track">
-            <option value="">Choose Track</option>
-            <option value="Backend Engineering">Backend Engineering</option>
-            <option value="Cloud Engineering">Cloud Engineering</option>
-            <option value="Data Analytics">Data Analytics</option>
-            <option value="Data Engineering">Data Engineering</option>
-            <option value="Data Science">Data Science</option>
-            <option value="Frontend Engineering">Frontend Engineering</option>
-            <option value="Product Design">Product Design</option>
-            <option value="Product Management">Product Management</option>
-            <option value="Product Marketing">Product Marketing</option>
-          </select>
-          <div id="btns">
-            <button id="select-btn">Select</button>
-            <a href="#" id="download-link" download="MyAltschoolIdCard.png"></a>
-            <button id="download-btn">Download</button>
+        
+        <div class="download-corner">
+          <div class="save-container">
+            <p><button class="btn" onclick="saveCardData()">Save Card</button></p>
+            <p style="padding: 2rem 1rem;">
+              <label for="jpg-format">
+                <i class="fas fa-download"></i> JPEG
+                <input id="jpg-format" type="radio" name="format" value="jpeg">
+              </label>
+              |
+              <label style="padding-left: 10px;" for="png-format">
+                <i class="fas fa-download"></i> PNG
+                <input id="png-format" type="radio" name="format" value="png">
+              </label>
+             
+            </p>
+            <p><button id="downloadBtn" class="btn" onclick="downloadIdCard()">Download ID Card</button></p> 
           </div>
-        </form>
+          <p id="msg" style="display: none; font-size: 9pt; padding-top: 1rem;">
+          </p>
+        </div>
+    
+
       </div>
+      
     </main>
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dom-to-image-more@3.1.6/dist/dom-to-image-more.min.js"></script>
+    <script src="/js/index.js"></script>
   </body>
 </html>
