@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (width <= 576px) {
     .grid-container {
       grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -13,7 +13,7 @@
     
 }
 
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
     .grid-container {
         grid-template-columns: 1fr 1fr;
           grid-template-rows: auto auto;
@@ -26,4 +26,4 @@
           /* margin: 10px auto; */
       }
       
-}
+} */

@@ -32,31 +32,7 @@ p {
     /* margin: 4rem auto; */
 }
 
-@media (max-width: 768px) {
 
-    .grid-container {
-        grid-template-columns: 1fr;
-
-    }
-    .main-container{
-        width: 50%;
-        margin: 10px auto;
-    }
-    
-}
-
-@media (min-width: 576px) {
-    .grid-container {
-        grid-template-columns: 1fr 1fr;
-      }
-   
-    .main-container{
-        width: 50%;
-        margin: 10px auto;
-    }
-
-      
-}
 
 
 .id-container{
