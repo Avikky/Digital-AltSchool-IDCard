@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <link href="/css/style.css" rel="stylesheet" />
-    <link href="/css/mobile.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/mobile.css" rel="stylesheet" />
 
     <title>ALTSCHOOL ID CARD</title>
   </head>
@@ -17,13 +17,13 @@
       <div class="grid-container">
         <div id="idcard" class="id-container">
           <div class="id-header">
-            <img  src="/img-v2/header.svg" alt="">
+            <img  src="img-v2/header.svg" alt="">
           </div>
   
           <div class="image-container">
             <div class="avatar-box">
               <label for="file-input">
-                <img id="avatar"  src="/img-v2/avatar-altschool.png" alt="">
+                <img id="avatar"  src="img-v2/avatar-altschool.png" alt="">
                 <img id="imagePreview" class="circle-avatar" style="display: none;"  src="" alt="">
               </label>
             </div>
@@ -43,7 +43,7 @@
               <div>
                 <div class="align-detail">
                   <p><strong>ID NO:</strong></p> 
-                  <p id="altSchoolID" contenteditable="true">ALT/SOE/023/0156</p>
+                  <p id="altSchoolID" contenteditable="true">ALT/SOE/001/001</p>
                 </div>
                 <hr>
                 <div class="align-detail">
@@ -78,13 +78,16 @@
           
        
           <div class="id-footer">
-            <img src="/img-v2/bottom-bg.svg" alt="">
+            <img src="img-v2/bottom-bg.svg" alt="">
           </div>
         </div>
         
         <div class="download-corner">
           <div class="save-container">
-            <p><button class="btn" onclick="saveCardData()">Save Card</button></p>
+            <div class="saveNreset">
+              <p><button class="btn" onclick="saveCardData()">Save Card</button></p>
+              <p><button class="btn" onclick="resetCardData()">Reset Card</button></p>
+            </div>
             <p style="padding: 2rem 1rem;">
               <label for="jpg-format">
                 <i class="fas fa-download"></i> JPEG
@@ -108,6 +111,6 @@
       
     </main>
     <script src="https://cdn.jsdelivr.net/npm/dom-to-image-more@3.1.6/dist/dom-to-image-more.min.js"></script>
-    <script src="/js/index.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

@@ -25,43 +25,15 @@ p {
 
 .grid-container{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-
     /* gap: 10px; */
     /* margin: 4rem auto; */
 }
 
-@media (max-width: 768px) {
-
-    .grid-container {
-        grid-template-columns: 1fr;
-
-    }
-    .main-container{
-        width: 50%;
-        margin: 10px auto;
-    }
-    
-}
-
-@media (min-width: 576px) {
-    .grid-container {
-        grid-template-columns: 1fr 1fr;
-      }
-   
-    .main-container{
-        width: 50%;
-        margin: 10px auto;
-    }
-
-      
-}
-
-
 .id-container{
     background-color: #f4f4f4;
-    /* width: 80%; */
+    width: 100%;
     border: 1px solid #E8E3DD;
     box-shadow: rgb(38, 57, 77)0px 20px 30px -10px;
     border-radius: 3px;
@@ -221,78 +193,20 @@ p {
     font-size: 9pt;
 
 }
-/* .logo{
-    padding-top: 3rem;
-} */
 
-/* LAYOUT */
-
-/* .container {
+.saveNreset{
     display: flex;
-    flex-wrap: wrap;
-    min-width: 370px;
-    width: 70%;
-    margin: 40px auto;
-    justify-content: space-between; 
-   
-} */
-
-.coy-logo {
-    width: 100%; 
-    max-width: 70px;
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-}
-
-.logo-name {
-    display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
-.banner {
-    width: 100%;
-    max-width: 300px;
-    background-color: #6772E5;
-    margin-bottom: 10px;
-    padding: 10px;
-    
-}
 
-#id-photo {
-   width: 100%;
-   max-width: 50%;
-   height: 90px;
-   margin: 0;
-   padding: 0;
-   border: 1px solid #676767;
-   background-position: center; 
-   background-size: cover;
-}
 
-.left-container {
-    width: 185px;
-    display: flex;
-    text-align: center;
-    background-color: #E8E3DD;    
-}
 
-.photos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #fcf5ed;
-    width: 185px;
 
-}
 
-.id-card {
-    background: #fefefe;
-    height: 49%;
-    /* text-align: left; */
-    /* padding-left: 5px; */
-}
+
+
 
 
 

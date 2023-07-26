@@ -197,6 +197,20 @@ function saveCardData() {
     altSchoolID.removeAttribute("contenteditable");
 }
 
+function resetCardData(){
+  // displaySchool.innerHTML =  getSchool.value;
+  // displayTrack.innerHTML =  getTrack.value;
+  getSchool.style.display = 'block';
+  getTrack.style.display = 'block';
+  displaySchool.style.display = 'none';
+  displayTrack.style.display = 'none';
+
+
+  altName.setAttribute("contenteditable", "true");
+  altSchoolID.setAttribute("contenteditable", "true");
+  
+}
+
 
 function checkIfFormatIsSelected() {
   let msg = 'ID card details is saved, click the download button to grab your ALTSCHOOL Identity Card';
